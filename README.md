@@ -1,34 +1,38 @@
-# Grant OS — AI Grant Intelligence Platform
+# Grant OS v2
 
-Full-stack grant management SaaS built with React + TypeScript + Vite + Netlify Functions.
+AI-powered grant discovery and management platform for nonprofits and organizations.
 
-## Features
-- **AI Grant Discovery** — finds matching grants from 47K+ sources using Claude AI
-- **Pipeline Manager** — Kanban board tracking grants from Discovery → Application → Submitted → Awarded
-- **Application Writer** — AI-drafts each section (Executive Summary, Program Narrative, Budget, Goals, Capacity)
-- **Application Reviewer** — constructive review, red-team analysis, differentiation advisor, cohesion checker
-- **Budget Assistant** — AI-generated budget justifications per line item
-- **Funder Persona** — deep analysis of funder priorities and communication style
-- **Success Pattern Analysis** — what types of projects this funder typically funds
-- **Deadline Tracker** — checklist with due dates per grant
-- **Compliance Manager** — reporting requirements and expense tracking
-- **Team Hub** — multi-user collaboration
-- **Intelligence Platform** — funding trends, knowledge base, lessons learned
+**Refactored from [EnhancedGrantSystem](https://github.com/sillinous/EnhancedGrantSystem)** — converted from Express/Gemini backend to Netlify Functions + Claude API with localStorage persistence.
 
-## Stack
-- React 19 + TypeScript
-- Vite 6
-- Netlify Functions (AI backend via Anthropic Claude)
-- localStorage for client-side persistence
-- Deployed to Netlify (auto-deploy from main branch)
+## What's New in v2
+- ✅ Fully deployable to Netlify (no Express server needed)
+- ✅ Claude API replaces Gemini (key set as `ANTHROPIC_API_KEY` in Netlify env)
+- ✅ localStorage replaces database (no backend, no auth server)
+- ✅ All 14 AI endpoints preserved as a single Netlify Function
+- ✅ Original components untouched — only services layer changed
+
+## AI Capabilities
+- Grant Discovery (profile-based search)
+- Eligibility Analysis
+- Application Section Drafting (6 sections)
+- Application Review (constructive + red-team)
+- Funder Persona Analysis
+- Success Pattern Analysis
+- Differentiation Strategy
+- Cohesion Analysis
+- Budget Justification
+- Impact Story Generation
+- Progress Report Drafting
+- Compliance Task Extraction
+- Grant Chat Assistant
 
 ## Deploy
 1. Fork this repo
 2. Connect to Netlify
-3. Set `ANTHROPIC_API_KEY` in Netlify environment variables
-4. Deploy
+3. Set env var: `ANTHROPIC_API_KEY=your-key`
+4. Deploy — done
 
-## Local Development
+## Local Dev
 ```bash
 npm install
 npm run dev
