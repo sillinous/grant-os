@@ -13,7 +13,7 @@ const callClaude = async (system, userContent, maxTokens = 1024) => {
       'anthropic-version': '2023-06-01'
     },
     body: JSON.stringify({
-      model: 'claude-haiku-4-5-20251001',
+      model: 'claude-3-haiku-20240307',
       max_tokens: maxTokens,
       system,
       messages: [{ role: 'user', content: userContent }]
@@ -262,7 +262,7 @@ Return JSON: { "innovativeAngles": [string], "alternativeMetrics": [string], "pa
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'x-api-key': ANTHROPIC_KEY, 'anthropic-version': '2023-06-01' },
         body: JSON.stringify({
-          model: 'claude-haiku-4-5-20251001',
+          model: 'claude-3-haiku-20240307',
           max_tokens: 800,
           system: `You are an expert grant writing assistant helping ${profile?.name || 'an organization'} apply for "${grant?.name}" (${grant?.fundingAmount}). Give specific, actionable advice. You know this grant's requirements and the organization's profile.`,
           messages: history
