@@ -1,1 +1,0 @@
-export { getProfiles, addProfile, updateProfile, deleteProfile } from './store';

@@ -1,17 +1,8 @@
-[build]
-  command = "npm run build"
-  publish = "dist"
-  functions = "netlify/functions"
-
-[functions]
-  node_bundler = "esbuild"
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
+# Grant OS has been consolidated into Grant Platform
+# All traffic redirects to the definitive grant product
 
 [[redirects]]
   from = "/*"
-  to = "/index.html"
-  status = 200
+  to = "https://grant-platform-unless.netlify.app/:splat"
+  status = 301
+  force = true
