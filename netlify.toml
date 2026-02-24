@@ -1,5 +1,5 @@
-# Grant OS has been consolidated into Grant Platform
-# All traffic redirects to the definitive grant product
+[build]
+  publish = "."
 
 [[redirects]]
   from = "/*"

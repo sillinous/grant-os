@@ -1,0 +1,2 @@
+# Redirect all traffic to canonical grant platform
+/*  https://grant-platform-unless.netlify.app/:splat  301!
