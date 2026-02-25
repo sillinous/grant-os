@@ -1,39 +1,36 @@
-# Grant OS v2
+# Grant OS v2 — DEPRECATED
 
-AI-powered grant discovery and management platform for nonprofits and organizations.
+> **This repository has been unified into [grant-platform](https://github.com/sillinous/grant-platform).**
+> All traffic is permanently redirected (301) to the canonical Grant Platform.
+> No new development will occur here.
 
-**Refactored from [EnhancedGrantSystem](https://github.com/sillinous/EnhancedGrantSystem)** — converted from Express/Gemini backend to Netlify Functions + Claude API with localStorage persistence.
+## Successor: UNLESS Grant Lifecycle Platform
 
-## What's New in v2
-- ✅ Fully deployable to Netlify (no Express server needed)
-- ✅ Claude API replaces Gemini (key set as `ANTHROPIC_API_KEY` in Netlify env)
-- ✅ localStorage replaces database (no backend, no auth server)
-- ✅ All 14 AI endpoints preserved as a single Netlify Function
-- ✅ Original components untouched — only services layer changed
+The production grant platform lives at **[sillinous/grant-platform](https://github.com/sillinous/grant-platform)** with:
 
-## AI Capabilities
-- Grant Discovery (profile-based search)
-- Eligibility Analysis
-- Application Section Drafting (6 sections)
-- Application Review (constructive + red-team)
-- Funder Persona Analysis
-- Success Pattern Analysis
-- Differentiation Strategy
-- Cohesion Analysis
-- Budget Justification
-- Impact Story Generation
-- Progress Report Drafting
-- Compliance Task Extraction
-- Grant Chat Assistant
+- 39 modules across 8 functional groups
+- 23+ live API integrations (Grants.gov, USASpending, Census, SAM, and more)
+- 16 AI endpoints with OpenRouter + Anthropic dual-provider support
+- Multi-turn chat with conversation history
+- Subscription tiers via Stripe (Pro $9/mo, Team $49/mo)
+- React 19 + Vite 7 single-file architecture (4,555 lines)
 
-## Deploy
-1. Fork this repo
-2. Connect to Netlify
-3. Set env var: `ANTHROPIC_API_KEY=your-key`
-4. Deploy — done
+## What Was Absorbed
 
-## Local Dev
-```bash
-npm install
-npm run dev
-```
+Grant OS's unique assets were ported to grant-platform:
+- 14 AI endpoints (now expanded to 16 with richer schemas)
+- Direct Anthropic API path (preserved as fallback)
+- Grant discovery with match scoring and tier classification
+- Multi-turn chat assistant with message history
+- Alternative pricing tiers preserved for A/B testing
+
+## Current State
+
+This repo is a redirect shell:
+- `netlify.toml` — 301 redirect all paths to grant-platform
+- `index.html` — meta-refresh redirect fallback
+- `_redirects` — additional redirect rule
+
+## History
+
+Originally **EnhancedGrantSystem** (Express/Gemini), refactored to **Grant OS v2** (Netlify/Claude), now unified into **UNLESS Grant Platform** (Feb 2026).
